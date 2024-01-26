@@ -17,9 +17,7 @@ namespace Infrastructure.UnitOfWork
         public readonly Context Context;
         public IRepository<User> UserRepository { get;private set; }
 
-        public IRepository<Product> ProductRepository { get; private set; }
-
-        public IRepository<Permission> PermissionRepository { get; private set; }
+       
 
         public IRepository<assessment_answers> assessment_AnswersRepo { get; private set; }
         public IRepository<assessment_questions> assessment_QuestionsRepo { get; private set; }
@@ -41,14 +39,12 @@ namespace Infrastructure.UnitOfWork
 
 
 
-        //public IRepository<User> Users => throw new NotImplementedException();
 
         public UnitOfWork(Context context) 
         {
             Context = context;
             UserRepository = new Repository<User>(Context);
-            //ProductRepository = new Repository<Product>(Context);
-            //PermissionRepository = new Repository<Permission>(Context);
+           
             assessment_true_falseRepo = new Repository<assessment_true_false>(Context);
             assessment_sectionsRepo = new Repository<assessment_sections>(Context);
             assessment_textRepo = new Repository<assessment_text>(Context);

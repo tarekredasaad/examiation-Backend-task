@@ -24,8 +24,7 @@ namespace Domain.Interfaces.UnitOfWork
         public IRepository<assessment_text> assessment_textRepo { get; }
         public IRepository<assessment_true_false> assessment_true_falseRepo { get; }
        
-        public IRepository<Product> ProductRepository { get; }
-        public IRepository<Permission> PermissionRepository { get; }
+        
         void commit();
     }
 }
